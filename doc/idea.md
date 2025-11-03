@@ -1,0 +1,3 @@
+- Player moves around setting up transmission towers on rooftops of residential buildings in an enclosed play area (brutalist futuristic neighbourhood). Each tower contributes to the player's combat power and helps the neighbourhood. With each major house the player goes to, there's a bit of lore revealed by the inhabitant. Traversing to the houses is difficult due to some sort of enemy mob presence. 
+- Each major tower placement point is progressively more difficult to reach than the previous one. 
+- Placing a tower and connecting it to the others involves playing a rhythm-like mini-game. A similar game is also played when trying to upgrade or "tune" the tower. Placing more towers or tuning existing ones, helps the player's regenerative ability
