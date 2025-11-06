@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bbnbvqm2xlw6k"]
+
+[ext_resource type="FontFile" uid="uid://dnkgrlp14ivwr" path="res://assets/fonts/yuji_syuku/YujiSyuku-Regular.ttf" id="1_j7pqa"]
+
+[resource]
+Button/font_sizes/font_size = 24
+Button/fonts/font = ExtResource("1_j7pqa")
