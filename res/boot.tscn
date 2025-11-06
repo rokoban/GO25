@@ -1,0 +1,116 @@
+[gd_scene load_steps=9 format=3 uid="uid://1arbxbtslw3j"]
+
+[ext_resource type="FontFile" uid="uid://carp4cup1d0es" path="res://assets/fonts/homura/04HomuraM-Medium.otf" id="1_n76rq"]
+[ext_resource type="Script" uid="uid://csmbgdiu0lkw4" path="res://boot.gd" id="1_t5imi"]
+[ext_resource type="FontFile" uid="uid://dnkgrlp14ivwr" path="res://assets/fonts/yuji_syuku/YujiSyuku-Regular.ttf" id="2_t5imi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_segco"]
+bg_color = Color(0.033853274, 0.03385329, 0.033853233, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m6jb1"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Animation" id="Animation_t5imi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TenkanoLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_n76rq"]
+resource_name = "start_up"
+length = 4.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TenkanoLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.7, 1.7, 3.3999999, 4.3999996),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(4.45),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_on_startup_anim_end"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_segco"]
+_data = {
+&"RESET": SubResource("Animation_t5imi"),
+&"start_up": SubResource("Animation_n76rq")
+}
+
+[node name="Boot" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t5imi")
+
+[node name="BG" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_segco")
+
+[node name="TenkanoLabel" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="TenkanoLabel"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_n76rq")
+theme_override_font_sizes/font_size = 64
+text = "天下ノ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="TenkanoLabel"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxFlat_m6jb1")
+
+[node name="Label2" type="Label" parent="TenkanoLabel"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_t5imi")
+text = "T E N K A N O © 
+- 2025 -"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_segco")
+}
+autoplay = "start_up"
