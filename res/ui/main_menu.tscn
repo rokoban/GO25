@@ -3,21 +3,6 @@
 [ext_resource type="Script" uid="uid://1qm82xgcd28c" path="res://ui/main_menu.gd" id="1_t7e0r"]
 [ext_resource type="Theme" uid="uid://bbnbvqm2xlw6k" path="res://ui/main_menu_theme.tres" id="2_0dkrt"]
 
-[sub_resource type="Animation" id="Animation_0dkrt"]
-resource_name = "menu_in"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("VBoxContainer:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="Animation" id="Animation_wk0pr"]
 length = 0.001
 tracks/0/type = "value"
@@ -31,6 +16,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0dkrt"]
+resource_name = "menu_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rmr83"]
@@ -53,6 +53,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -4.0
+offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.03529412, 0.03529412, 0.03529412, 1)
@@ -73,6 +75,7 @@ grow_vertical = 0
 [node name="ContinueButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_0dkrt")
+disabled = true
 text = "CONTINUE"
 
 [node name="NewGameButton" type="Button" parent="VBoxContainer"]
@@ -83,11 +86,13 @@ text = "NEW GAME"
 [node name="SettingsButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_0dkrt")
+disabled = true
 text = "SETTINGS"
 
 [node name="CreditsButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_0dkrt")
+disabled = true
 text = "CREDITS"
 
 [node name="ExitButton" type="Button" parent="VBoxContainer"]
@@ -100,3 +105,6 @@ libraries = {
 &"": SubResource("AnimationLibrary_rmr83")
 }
 autoplay = "menu_in"
+
+[connection signal="pressed" from="VBoxContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

@@ -3,5 +3,7 @@
 [ext_resource type="FontFile" uid="uid://dnkgrlp14ivwr" path="res://assets/fonts/yuji_syuku/YujiSyuku-Regular.ttf" id="1_j7pqa"]
 
 [resource]
-Button/font_sizes/font_size = 24
+Button/font_sizes/font_size = 18
 Button/fonts/font = ExtResource("1_j7pqa")
+Label/font_sizes/font_size = 32
+Label/fonts/font = ExtResource("1_j7pqa")
