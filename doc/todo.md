@@ -1,0 +1,37 @@
+- [x] Create loading screen  
+- [x] Create loading → Main Menu Transition  
+- [ ] Setup third-person camera controller
+- [ ] Implement gravity and jumping in character controller
+- [ ] Document game concept
+	- [ ] Write Gameplay Summary 
+	- [ ] Write Story Concept
+	- [ ] Draw concept sketches of the character  
+	- [ ] The game world  
+	  - [ ] The player viewpoint  
+	    - [ ] In navigation  
+	    - [ ] Combat  
+	    - [ ] Interaction – signal tower  
+	- [ ] The dialogue / cut-scene interface  
+	- [ ] The tower signal setup mini-game
+- [ ] Design in-game HUD
+- [ ] Create in-game HUD
+	- Full-screen Canvas Layer, always visible, views (UI scenes) are added and removed as needed via a `HUDController`
+- [ ] Implement pop-up confirmation widgets  
+- [ ] Main Menu → Game Transition
+	- [ ] Fade-out & Fade-in Transition
+- [ ] Game (HUD) → Main Menu Transition 
+
+---
+
+- [ ] Polish Menu styles and animations  
+- [ ] Implement basic settings view  
+- [ ] Implement credits 
+- [ ] Button activation effect  
+- [ ] Button styles 
+- [ ] Menu sounds  
+- [ ] Title image  
+- [ ] Menu BG animation  
+- [ ] Menu item idle animation  
+- [ ] Transitions (Menu → Settings → Credits)  
+
+---
