@@ -1,1 +1,6 @@
-{}
+{
+  "monospaceFontFamily": "IBM Plex Mono,Fira Mono",
+  "textFontFamily": "",
+  "baseFontSize": 18,
+  "baseFontSizeAction": true
+}
