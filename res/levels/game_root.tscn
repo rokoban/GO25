@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfe8lxc2bak7y"]
+
+[ext_resource type="Script" uid="uid://4eql1b4vdsxu" path="res://game.gd" id="1_7bw3p"]
+[ext_resource type="PackedScene" uid="uid://ctq2n8s2po12s" path="res://ui/hud_control.tscn" id="2_p47ll"]
+[ext_resource type="PackedScene" uid="uid://cp6xy3x538t51" path="res://levels/dam_level.tscn" id="3_2c0g4"]
+[ext_resource type="PackedScene" uid="uid://boy2k8kpa3cj4" path="res://player/player.tscn" id="4_spcbw"]
+
+[node name="GameRoot" type="Node3D"]
+script = ExtResource("1_7bw3p")
+
+[node name="InGameHUD" parent="." instance=ExtResource("2_p47ll")]
+process_mode = 2
+
+[node name="DamLevel" parent="." instance=ExtResource("3_2c0g4")]
+
+[node name="Player" parent="DamLevel" instance=ExtResource("4_spcbw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06786317, -0.9957987, 4.764041)
+
+[editable path="DamLevel"]
