@@ -1,0 +1,3 @@
+- Yuji Mai (筆文字フォント) - By [Kinuta Font Factory](https://www.moji-sekkei.jp/)
+- Yuji Syuku (筆文字フォント) - By [Kinuta Font Factory](https://www.moji-sekkei.jp/)
+- Homura Minchou 焔明朝 (明朝体フォント) - By [hidotn](https://fontgraphic.jp/download/fg-homura/)
